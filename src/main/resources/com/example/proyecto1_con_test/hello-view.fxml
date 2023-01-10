@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="891.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecto1_con_test.HelloController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <GridPane prefWidth="267.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="147.0" />
+                <ColumnConstraints halignment="LEFT" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="145.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+                    <font>
+                        <Font size="31.0" />
+                    </font>
+                </Label>
+                <Label text="Id" GridPane.rowIndex="2">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets></Label>
+                <Label text="Nombre" GridPane.rowIndex="3" />
+                <TextField fx:id="txtID" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buscarBebidaID" text="Buscar ID" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+            <Button fx:id="buttonBNombre" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buscarBebidaNombre" text="Buscar nombre" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cargarDatosTabla" text="Recargar Datos" GridPane.columnSpan="2147483647" GridPane.rowIndex="8" />
+            </children>
+            <GridPane.margin>
+                <Insets left="5.0" />
+            </GridPane.margin>
+        </GridPane>
+        <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAbrirEdicion" text="Actualizar Datos" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAbrirAlta" text="Alta" GridPane.rowIndex="4" />
+                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBorrarClicked" text="Baja" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            </children>
+            <GridPane.margin>
+                <Insets right="5.0" />
+            </GridPane.margin>
+        </GridPane>
+      <TableView fx:id="tvBebidas" prefHeight="200.0" prefWidth="200.0" stylesheets="@estilos.css" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+        <columns>
+          <TableColumn fx:id="tcID" minWidth="-1.0" prefWidth="-1.0" text="ID" />
+          <TableColumn fx:id="tcNombre" minWidth="-1.0" prefWidth="-1.0" text="NOMBRE" />
+            <TableColumn fx:id="tcPrecio" prefWidth="75.0" text="PRECIO" />
+            <TableColumn fx:id="tcCantidad" prefWidth="75.0" text="CANTIDAD" />
+            <TableColumn fx:id="tcProxEncargo" prefWidth="75.0" text="PROX. ENCARGO" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hbox" stylesheets="@estilos.css" GridPane.columnSpan="2147483647" GridPane.hgrow="ALWAYS">
+         <children>
+            <TextField fx:id="txtLinea" disable="true" visible="false" />
+         </children></HBox>
+      <Label text="BEBIDAS" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Commercial Pi BT" size="27.0" />
+         </font>
+      </Label>
+    </children>
+</GridPane>

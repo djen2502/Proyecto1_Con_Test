@@ -1,0 +1,31 @@
+.hbox{
+    -fx-background-color: #32d4e3;
+}
+
+.table-view .column-header * {
+    -fx-background-color: #32d4e3;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+}
+
+/** color the arrow */
+.table-view .column-header .arrow {
+    -fx-background-color: black;
+}
+
+/** color the column header text */
+
+
+/** add slight dividers between headers */
+.table-view .column-header {
+    -fx-border-color: black;
+    -fx-border-width: 1
+}
+
+/** color the scroll bar background and thumb */
+.table-view .scroll-bar {
+    -fx-background-color: #32d4e3;
+}
+.table-view .scroll-bar .thumb {
+    -fx-background-color: blue;
+}
