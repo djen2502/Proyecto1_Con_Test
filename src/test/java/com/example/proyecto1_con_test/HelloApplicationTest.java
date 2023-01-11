@@ -9,6 +9,7 @@ import org.testfx.api.FxAssert;
 import org.testfx.api.FxRobot;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
+import org.testfx.matcher.control.ButtonMatchers;
 import org.testfx.matcher.control.TextInputControlMatchers;
 
 import java.io.IOException;
@@ -18,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(ApplicationExtension.class)
 class HelloApplicationTest {
 
+    String valor ="11";
 
     FXMLLoader mainroot;
     Scene mainstage;
@@ -32,7 +34,7 @@ class HelloApplicationTest {
         stage.show();
     }
 
-
+/*
     @Test
     void validarEscribirValorEncampoTexto(FxRobot robot) throws InterruptedException {
         robot.clickOn("#txtNombre");
@@ -52,4 +54,30 @@ class HelloApplicationTest {
         robot.clickOn("#buttonBNombre");
 
     }
+*/
+    @Test
+    void aniadir(FxRobot robot) {
+        robot.clickOn("#aniadir");
+        robot.clickOn("#txtNombre");
+        robot.write("David");
+        robot.clickOn("#txtPrecio");
+        robot.write("2");
+        robot.clickOn("#txtCantidad");
+        robot.write("10");
+        robot.clickOn("#txtEncargo");
+        robot.write("4/1/2023");
+        robot.clickOn("#aniadirButton");
+    }
+
+
+    @Test
+    void borrar(FxRobot robot) {
+        robot.clickOn("#txtID");
+        robot.write(valor.toString());
+        robot.clickOn("#borrar");
+        robot.clickOn("Sí");
+        robot.clickOn("Aceptar");
+
+    }
+
 }

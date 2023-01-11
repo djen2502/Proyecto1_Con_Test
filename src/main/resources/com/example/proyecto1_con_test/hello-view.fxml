@@ -70,8 +70,8 @@
             </rowConstraints>
             <children>
                 <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAbrirEdicion" text="Actualizar Datos" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
-                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAbrirAlta" text="Alta" GridPane.rowIndex="4" />
-                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBorrarClicked" text="Baja" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Button fx:id="aniadir" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAbrirAlta" text="Alta" GridPane.rowIndex="4" />
+                <Button fx:id="borrar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBorrarClicked" text="Baja" GridPane.columnIndex="2" GridPane.rowIndex="4" />
             </children>
             <GridPane.margin>
                 <Insets right="5.0" />
