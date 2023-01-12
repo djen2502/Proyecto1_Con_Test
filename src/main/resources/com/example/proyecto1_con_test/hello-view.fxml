@@ -46,7 +46,7 @@
                     </opaqueInsets></Label>
                 <Label text="Nombre" GridPane.rowIndex="3" />
                 <TextField fx:id="txtID" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="txtNombre1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buscarBebidaID" text="Buscar ID" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
             <Button fx:id="buttonBNombre" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buscarBebidaNombre" text="Buscar nombre" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cargarDatosTabla" text="Recargar Datos" GridPane.columnSpan="2147483647" GridPane.rowIndex="8" />

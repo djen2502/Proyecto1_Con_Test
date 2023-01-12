@@ -49,7 +49,7 @@ public class HelloController {
     @FXML
     private TableView tvBebidas;
     @FXML
-    private TextField txtNombre;
+    private TextField txtNombre1;
 
     @FXML
     private TableColumn tcID;
@@ -106,7 +106,7 @@ public class HelloController {
 
         System.out.println(datos.size());
 
-        Predicate<Bebida> Filtro = i -> i.getNombre().equals(txtNombre.getText());
+        Predicate<Bebida> Filtro = i -> i.getNombre().equals(txtNombre1.getText());
 
         tcID.setCellValueFactory(new PropertyValueFactory<Bebida, Integer>("ID"));
         tcNombre.setCellValueFactory(new PropertyValueFactory<Bebida, String>("Nombre"));
@@ -252,7 +252,7 @@ public class HelloController {
     private void realizarBindingsProductoAux ( Bebida producto) {
 
         txtID.textProperty().bindBidirectional(producto.IDProperty(),new NumberStringConverter());
-        txtNombre.textProperty().bindBidirectional(producto.NombreProperty());
+        txtNombre1.textProperty().bindBidirectional(producto.NombreProperty());
 
     }
 

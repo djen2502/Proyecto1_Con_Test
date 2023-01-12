@@ -38,7 +38,7 @@
             <TextField fx:id="txtPrecio" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="txtCantidad" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Proximo encargo" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <DatePicker fx:id="txtEncargo" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <DatePicker id="txtEncargo" fx:id="txtEncargo" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
       <GridPane GridPane.columnSpan="2147483647" GridPane.rowIndex="3">

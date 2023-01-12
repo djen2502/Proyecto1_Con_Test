@@ -9,20 +9,18 @@ import org.testfx.api.FxAssert;
 import org.testfx.api.FxRobot;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
-import org.testfx.matcher.control.ButtonMatchers;
 import org.testfx.matcher.control.TextInputControlMatchers;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
 //import static org.testfx.util.NodeQueryUtils.hasTest
 @ExtendWith(ApplicationExtension.class)
-class HelloApplicationTest {
+class BusquedaTest {
 
-    String valor ="11";
 
     FXMLLoader mainroot;
     Scene mainstage;
+
 
 
     @Start
@@ -34,50 +32,25 @@ class HelloApplicationTest {
         stage.show();
     }
 
-/*
     @Test
     void validarEscribirValorEncampoTexto(FxRobot robot) throws InterruptedException {
-        robot.clickOn("#txtNombre");
+        robot.clickOn("#txtNombre1");
         robot.write("sa");
         // robot.wait(50000);
-        FxAssert.verifyThat("#txtNombre", TextInputControlMatchers.hasText("sa"));
+        FxAssert.verifyThat("#txtNombre1", TextInputControlMatchers.hasText("sa"));
         robot.clickOn("#buttonBNombre");
-
     }
 
     @Test
     void validarEscribirValorEncampoTexto2(FxRobot robot) throws InterruptedException {
-        robot.clickOn("#txtNombre");
+        robot.clickOn("#txtNombre1");
         robot.write("David");
         // robot.wait(50000);
-        FxAssert.verifyThat("#txtNombre", TextInputControlMatchers.hasText("David"));
+        FxAssert.verifyThat("#txtNombre1", TextInputControlMatchers.hasText("David"));
         robot.clickOn("#buttonBNombre");
 
     }
-*/
-    @Test
-    void aniadir(FxRobot robot) {
-        robot.clickOn("#aniadir");
-        robot.clickOn("#txtNombre");
-        robot.write("David");
-        robot.clickOn("#txtPrecio");
-        robot.write("2");
-        robot.clickOn("#txtCantidad");
-        robot.write("10");
-        robot.clickOn("#txtEncargo");
-        robot.write("4/1/2023");
-        robot.clickOn("#aniadirButton");
-    }
 
 
-    @Test
-    void borrar(FxRobot robot) {
-        robot.clickOn("#txtID");
-        robot.write(valor.toString());
-        robot.clickOn("#borrar");
-        robot.clickOn("Sí");
-        robot.clickOn("Aceptar");
-
-    }
 
 }
