@@ -14,13 +14,14 @@ class BorrarTestUni {
 
     BebidaDAO dao = new BebidaDAO();
 
-    Bebida bebida1 = new Bebida(26,"David",2.0,10,"4/1/2023");
+    Bebida bebida1 = new Bebida(1,"David",2.0,10,"4/1/2023");
 
 
     @Test
     public void borra(){
-
+        System.out.println("-----> Existen "+dao.obtenerProductos().size()+" productos antes de la operacion.");
         assertEquals(true, dao.borrarBebida(bebida1));
+        System.out.println("-----> Existen "+dao.obtenerProductos().size()+" productos despues de la operacion.");
     }
 
 

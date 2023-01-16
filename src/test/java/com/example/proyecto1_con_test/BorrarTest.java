@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(ApplicationExtension.class)
 class BorrarTest {
 
-    String valor ="18";
+    String valor ="1";
     FXMLLoader mainroot;
     Scene mainstage;
 
@@ -38,6 +38,7 @@ class BorrarTest {
 
     @Test
     void borrar(FxRobot robot) {
+
         robot.clickOn("#txtID");
         robot.write(valor.toString());
         robot.clickOn("#borrar");

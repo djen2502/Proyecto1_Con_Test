@@ -120,9 +120,8 @@ public class HelloController {
         Predicate<Bebida> filter = Filtro;
         items.setPredicate(filter);
     }
-
     @FXML
-    private void cargarDatosTabla () {
+    private void cargarDatosTabla() {
 
         datos = BebidaDAO.obtenerProductos();
 

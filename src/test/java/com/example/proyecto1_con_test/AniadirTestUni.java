@@ -14,13 +14,23 @@ class AniadirTestUni {
 
     BebidaDAO dao = new BebidaDAO();
 
-    Bebida bebida1 = new Bebida(26,"Saapo",200.0,10,"4/1/2023");
+    Bebida bebida1 = new Bebida(1,"Saapo",2.0,10,"4/1/2023");
 
 
     @Test
     public void alta(){
 
+
+        System.out.println("-----> Existen "+dao.obtenerProductos().size()+" productos antes de la operacion.");
         assertEquals(true, dao.altaBebida(bebida1));
+        System.out.println("-----> Existen "+dao.obtenerProductos().size()+" productos despues de la operacion.");
+
+        dao.obtenerProductos().forEach((cif -> {
+            if(bebida1.getNombre().equals(cif.getNombre()) && bebida1.getCantidad().equals(cif.getCantidad()) && bebida1.getPrecio().equals(cif.getPrecio()) && bebida1.getProxEncargo().equals(cif.getProxEncargo())){
+                System.out.println(cif);
+            }
+
+        }));
     }
 
 }
